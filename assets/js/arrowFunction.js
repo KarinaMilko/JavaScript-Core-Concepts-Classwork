@@ -43,3 +43,24 @@ const a = {
   },
 };
 a.meth();
+
+// Task: Функція greeting(lang, userName), яка має повертати
+// 'Hello' + userName, if lang==='en'
+// 'Вітаю' + userName, if lang==='ua'
+
+// greeting('ua', "Ivo") => "Вітаю Ivo"
+// greeting('en',"Ivo") => "Hello Ivo"
+
+// const greeting = (lang, userName) =>
+//   lang === "ua" ? "Вітаю" + userName : "Hello" + userName;
+const greetingOptions = {
+  en: "Hello",
+  ua: "Вітаю",
+};
+
+// const lang = "ua";
+
+const greeting = (lang, userName) => `${greetingOptions[lang]} ${userName}`;
+
+console.log(greeting("en", "Ivo"));
+console.log(greeting("ua", "Іво"));
